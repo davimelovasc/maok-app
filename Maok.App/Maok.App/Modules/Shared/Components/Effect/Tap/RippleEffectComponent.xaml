@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<controls:MaterialContentView
+    x:Class="Maok.App.Modules.Shared.Components.Effect.Tap.RippleEffectComponent"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XamarinBackgroundKit.Controls;assembly=XamarinBackgroundKit"
+    x:Name="RippleEffect"
+    IsEnabled="True"
+    IsFocusable="True"
+    Style="{DynamicResource RippleEffect}">
+    <controls:MaterialContentView.Background>
+        <controls:Background
+            BorderColor="{Binding BorderColor, Source={x:Reference RippleEffect}}"
+            BorderWidth="{Binding BorderWidth, Source={x:Reference RippleEffect}}"
+            CornerRadius="{Binding CornerRadius, Source={x:Reference RippleEffect}}"
+            Elevation="{Binding Elevation, Source={x:Reference RippleEffect}}"
+            IsRippleEnabled="{Binding IsRippleEnabled, Source={x:Reference RippleEffect}}"
+            RippleColor="{Binding RippleColor, Source={x:Reference RippleEffect}}"
+            ShadowColor="{Binding ShadowColor, Source={x:Reference RippleEffect}}"
+            Color="{Binding Color, Source={x:Reference RippleEffect}}" />
+    </controls:MaterialContentView.Background>
+</controls:MaterialContentView>

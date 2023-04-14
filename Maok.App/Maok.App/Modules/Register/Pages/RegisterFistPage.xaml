@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:BasePage
+    xmlns:pages="clr-namespace:Maok.App.Modules.Shared.Pages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Maok.App.Modules.Register.Pages.RegisterFistPage"
+    x:Name="RegisterFist"
+    HasBackButton="True"
+    HasHeader="False"
+    Theme="Light"
+    UseSafeAreaBottom="False"
+    UseSafeAreaTop="False">
+    <pages:BasePage.Body>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.30*" />
+                <RowDefinition Height="0.70*" />
+            </Grid.RowDefinitions>
+            <Image
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Source="{Binding Model.ImageBackground}"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"                
+                VerticalOptions="FillAndExpand" />
+
+            <Image
+                Grid.Row="0"
+                Source="botao_voltar.png"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="15,40,0,0"
+                WidthRequest="20"
+                HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToBackPageCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Label
+                Grid.Row="0"
+                Padding="32"
+                Margin="0,70,0,0"
+                Text="Agora vamos adicionar a palma da sua mão."
+                VerticalOptions="Start"
+                HorizontalOptions="Start"                    
+                FontAttributes="Bold"
+                TextColor="White"
+                FontSize="24"/>
+
+            <StackLayout
+                Grid.Row="1"
+                Spacing="25"
+                Padding="32"
+                Margin="0,0,0,120"
+                VerticalOptions="Start"
+                HorizontalOptions="Start">
+                <Grid
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.10*" />
+                        <ColumnDefinition Width="0.90*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="icone_lampada.png"
+                        WidthRequest="25"
+                        HeightRequest="25"/>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Certifique-se de estar em um local com uma boa iluminação"
+                        Margin="5,0,0,2"
+                        VerticalTextAlignment="Center"
+                        TextColor="#FFFFFF"
+                        FontSize="12"/>
+                </Grid>
+                <Grid
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.10*" />
+                        <ColumnDefinition Width="0.90*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Margin="0"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="icone_mao_pequena.png"
+                        WidthRequest="20"
+                        HeightRequest="20"/>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Você só poderá cadastrar uma mão. Portanto, lembre-se de qual palma vai utilizar (direita ou esquerda)"
+                        Margin="5,0,0,2"
+                        VerticalTextAlignment="Center"
+                        TextColor="#FFFFFF"
+                        FontSize="12"/>
+                </Grid>
+                <Grid
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.10*" />
+                        <ColumnDefinition Width="0.90*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="icone_esticar.png"
+                        WidthRequest="15"
+                        HeightRequest="15"/>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Tente esticar todos os seus dedos o máximo que conseguir durante o processo. Prometemos que será rápido"
+                        Margin="5,0,0,2"
+                        VerticalTextAlignment="Center"
+                        TextColor="#FFFFFF"
+                        FontSize="12"/>
+                </Grid>
+                <Grid
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.10*" />
+                        <ColumnDefinition Width="0.85*" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="icone_camera.png"
+                        WidthRequest="30"
+                        HeightRequest="30"/>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Posicione a palma da sua mão no centro da camêra"
+                        Margin="5,0,0,2"
+                        VerticalTextAlignment="Center"
+                        TextColor="#FFFFFF"
+                        FontSize="12"/>
+                </Grid>
+            </StackLayout>
+
+            <Button
+                Grid.Row="1"
+                Command="{Binding Source={x:Reference RegisterFist}, Path=BindingContext.GoToNameCommand}"
+                BackgroundColor="#5D25C8"
+                TextColor="White"
+                Text="PRÓXIMO"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,80"
+                WidthRequest="300"
+                HeightRequest="50"
+                CornerRadius="20"/>
+        </Grid>
+    </pages:BasePage.Body>
+</pages:BasePage>

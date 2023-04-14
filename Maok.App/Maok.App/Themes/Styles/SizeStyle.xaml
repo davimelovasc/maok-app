@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Maok.App.Themes.Styles.SizeStyle"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <Thickness x:Key="SafeAreaInsets" />
+
+    <OnPlatform
+        x:Key="Size8"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">8</On>
+        <On Platform="iOS">8</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size10"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">11</On>
+        <On Platform="iOS">11</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size12"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">12</On>
+        <On Platform="iOS">12</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size14"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">14</On>
+        <On Platform="iOS">14</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size18"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">18</On>
+        <On Platform="iOS">18</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size16"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">16</On>
+        <On Platform="iOS">16</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size20"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">20</On>
+        <On Platform="iOS">20</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size22"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">22</On>
+        <On Platform="iOS">22</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size24"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">24</On>
+        <On Platform="iOS">24</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size28"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">28</On>
+        <On Platform="iOS">28</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size30"
+        x:TypeArguments="system:Double">
+        <On Platform="Android">30</On>
+        <On Platform="iOS">30</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size32"
+        x:TypeArguments="system:Double">
+        <On Platform="Android">32</On>
+        <On Platform="iOS">32</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="Size48"
+        x:TypeArguments="system:Double">
+        <On Platform="Android">48</On>
+        <On Platform="iOS">48</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="HeightButton"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">52</On>
+        <On Platform="iOS">52</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="HeightButtonSM"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">37</On>
+        <On Platform="iOS">37</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="CornerRadiusButton"
+        x:TypeArguments="CornerRadius">
+        <On Platform="Android">25</On>
+        <On Platform="iOS">50</On>
+    </OnPlatform>
+
+
+    <OnPlatform
+        x:Key="CornerRadiusButtonSM"
+        x:TypeArguments="CornerRadius">
+        <On Platform="Android">18</On>
+        <On Platform="iOS">35</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="CornerRadiusCard"
+        x:TypeArguments="x:Single">
+        <On Platform="Android">8</On>
+        <On Platform="iOS">8</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="CornerRadiusEntry"
+        x:TypeArguments="x:Double">
+        <On Platform="Android">8</On>
+        <On Platform="iOS">8</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="CornerRadiusContainerEntry"
+        x:TypeArguments="Thickness">
+        <On Platform="Android">8</On>
+        <On Platform="iOS">8</On>
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="SizeEntry"
+        x:TypeArguments="Thickness">
+        <On Platform="Android">30</On>
+        <On Platform="iOS">30</On>
+    </OnPlatform>
+</ResourceDictionary>

@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<freshMvvm:FreshBaseContentPage
+    x:Class="Maok.App.Modules.Shared.Pages.BasePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:freshMvvm="clr-namespace:FreshMvvm;assembly=FreshMvvm"
+    xmlns:iOs="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:enums="clr-namespace:Maok.App.Modules.Shared.Enums"
+    x:Name="Base"
+    iOs:NavigationPage.HideNavigationBarSeparator="True"
+    iOs:NavigationPage.IsNavigationBarTranslucent="False"
+    iOs:Page.UseSafeArea="False"
+    NavigationPage.BackButtonTitle=" "
+    NavigationPage.HasNavigationBar="False"
+    Style="{DynamicResource Base}"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+    xmlns:tap1="clr-namespace:Maok.App.Modules.Shared.Components.Effect.Tap"
+    sharedTransitions:SharedTransitionNavigationPage.TransitionDuration="300"
+    sharedTransitions:SharedTransitionNavigationPage.BackgroundAnimation="SlideFromRight">
+
+    <Grid x:Name="Main">
+        <ContentView x:Name="InjectBodyInternal" />
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Frame
+                x:Name="FrameHeader"
+                x:FieldModifier="Protected"
+                Grid.Row="0"
+                Padding="0"
+                BackgroundColor="{Binding BackgroundColor, Source={x:Reference Base}}"
+                CornerRadius="0"
+                HasShadow="False"
+                HeightRequest="{OnPlatform iOS=60,
+                                           Android=55}"
+                IsTabStop="False"
+                IsVisible="{Binding HasHeader, Source={x:Reference Base}}"
+                Opacity="0">
+
+                <Frame.Triggers>
+                    <DataTrigger
+                        Binding="{Binding IsVisible, Source={x:Reference FrameHeader}}"
+                        TargetType="Frame"
+                        Value="True">
+                        <Setter Property="Opacity" Value="1" />
+                    </DataTrigger>
+                </Frame.Triggers>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        x:Name="Back"
+                        Grid.Column="0"
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="{Binding HasBackButton, Source={x:Reference Base}}"
+                        Opacity="0"
+                        VerticalOptions="FillAndExpand">
+                        <!--<forms:SvgCachedImage
+                            Margin="16,0,0,0"
+                            AutomationProperties.HelpText="Voltar para a tela anterior"
+                            AutomationProperties.IsInAccessibleTree="true"
+                            AutomationProperties.Name="Botão de ação"
+                            FadeAnimationEnabled="False"
+                            HeightRequest="20"
+                            HorizontalOptions="Start"
+                            Source="{utils:SvgMarkup Source={x:Static constants:Constant.SvgAngleLeftGrey}}"
+                            TabIndex="0"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="20">
+                            <forms:SvgCachedImage.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                    TargetType="forms:SvgCachedImage"
+                                    Value="True">
+                                    <Setter Property="Source" Value="{utils:SvgMarkup Source={x:Static constants:Constant.SvgAngleLeftWhite}}" />
+                                </DataTrigger>
+                            </forms:SvgCachedImage.Triggers>
+                        </forms:SvgCachedImage>-->
+                        <StackLayout.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference Back}, Path=IsVisible}"
+                                TargetType="StackLayout"
+                                Value="True">
+                                <Setter Property="Opacity" Value="1" />
+                            </DataTrigger>
+                        </StackLayout.Triggers>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={x:Reference Base}, Path=BindingContext.GoToBackPageCommand}"
+                                CommandParameter="{Binding BackParameter, Source={x:Reference Base}}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <Label
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        HorizontalOptions="Center"
+                        IsTabStop="False"
+                        Style="{DynamicResource Label16BlackBold}"
+                        Text="{Binding Title, Source={x:Reference Base}}"
+                        VerticalOptions="Center">
+                        <Label.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                TargetType="Label"
+                                Value="True">
+                                <Setter Property="Style" Value="{DynamicResource Label16Bold}" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <StackLayout
+                        x:Name="Help"
+                        Grid.Column="3"
+                        BackgroundColor="{Binding BackgroundColor, Source={x:Reference FrameHeader}}"
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="{Binding HasHelp, Source={x:Reference Base}}"
+                        Opacity="0"
+                        VerticalOptions="FillAndExpand">
+                        <!--<forms:SvgCachedImage
+                            AutomationProperties.HelpText="Precisa de ajuda? Pressione aqui e vamos te levar para a central de ajuda"
+                            AutomationProperties.IsInAccessibleTree="true"
+                            AutomationProperties.Name="Botão de ação"
+                            FadeAnimationEnabled="False"
+                            HeightRequest="24"
+                            HorizontalOptions="Start"
+                            Source="{utils:SvgMarkup Source={x:Static constants:Constant.SvgIconHelpBlue}}"
+                            TabIndex="2"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="24">
+                            <forms:SvgCachedImage.Triggers>
+                                <MultiTrigger TargetType="forms:SvgCachedImage">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                            Value="False" />
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=HasInformation}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Source" Value="{utils:SvgMarkup Source={x:Static constants:Constant.SvgIconInfoGrey}}" />
+                                </MultiTrigger>
+
+                                <MultiTrigger TargetType="forms:SvgCachedImage">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=HasInformation}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Source" Value="{utils:SvgMarkup Source={x:Static constants:Constant.SvgIconInfoGrey}}" />
+                                </MultiTrigger>
+
+                                <MultiTrigger TargetType="forms:SvgCachedImage">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                            Value="False" />
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=HasFilter}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Source" Value="{utils:SvgMarkup Source={x:Static constants:Constant.SvgIconFilerBlue}}" />
+                                </MultiTrigger>
+
+                                <MultiTrigger TargetType="forms:SvgCachedImage">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=HasFilter}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Source" Value="{utils:SvgMarkup Source={x:Static constants:Constant.SvgIconFilerWhite}}" />
+                                </MultiTrigger>
+
+                                <MultiTrigger TargetType="forms:SvgCachedImage">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=IconsWhite}"
+                                            Value="True" />
+                                        <BindingCondition
+                                            Binding="{Binding Source={x:Reference Base}, Path=HasHelp}"
+                                            Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Source" Value="{utils:SvgMarkup Source={x:Static constants:Constant.SvgIconHelpWhite}}" />
+                                </MultiTrigger>
+                            </forms:SvgCachedImage.Triggers>
+                        </forms:SvgCachedImage>-->
+                        <StackLayout.Triggers>
+                            <Trigger TargetType="StackLayout" Property="IsVisible" Value="True">
+                                <Setter Property="Opacity" Value="1" />
+                            </Trigger>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference Base}, Path=HasFilter}"
+                                TargetType="StackLayout"
+                                Value="True">
+                                <Setter Property="IsVisible" Value="True" />
+                            </DataTrigger>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference Base}, Path=HasInformation}"
+                                TargetType="StackLayout"
+                                Value="True">
+                                <Setter Property="IsVisible" Value="True" />
+                            </DataTrigger>
+                        </StackLayout.Triggers>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:Reference Base}, Path=BindingContext.ActionBarCommand}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <ContentView
+                x:Name="body"
+                Grid.Row="1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+        </Grid>
+        <ContentView
+            x:Name="BottomSheetBackground"
+            HorizontalOptions="FillAndExpand"
+            IsClippedToBounds="False"
+            IsVisible="False"
+            Opacity="0"
+            Style="{DynamicResource BottomSheetBackground}"
+            VerticalOptions="FillAndExpand" />
+
+        <ContentView
+            x:Name="BottomSheetContainer"
+            IsVisible="False"
+            Opacity="0"
+            VerticalOptions="EndAndExpand">
+            <tap1:RippleEffectComponent
+                Padding="0"
+                BorderColor="{Binding BottomSheetBorderColor, Source={x:Reference Base}}"
+                CornerRadius="{Binding BottomSheetCornerRadius, Source={x:Reference Base}}"
+                IsClickable="True"
+                IsRippleEnabled="False"
+                ShadowColor="{Binding BottomSheetShadowColor, Source={x:Reference Base}}"
+                Color="{Binding BottomSheetColor, Source={x:Reference Base}}">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <ContentView
+                        x:Name="ContainerPipe"
+                        HeightRequest="25"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Frame
+                            Padding="0"
+                            CornerRadius="2.5"
+                            HasShadow="False"
+                            HeightRequest="5"
+                            HorizontalOptions="Center"
+                            Style="{DynamicResource BottomSheetLine}"
+                            VerticalOptions="EndAndExpand"
+                            WidthRequest="40" />
+                        <ContentView.GestureRecognizers>
+                            <PanGestureRecognizer
+                                PanUpdated="BottomSheetOnPan"
+                                TouchPoints="1" />
+                        </ContentView.GestureRecognizers>
+                    </ContentView>
+                    <ContentView
+                        x:Name="BottomSheetContent"
+                        Grid.Row="1"
+                        Padding="20" />
+                </Grid>
+            </tap1:RippleEffectComponent>
+        </ContentView>
+        <ContentView
+            x:Name="AlertContainer"
+            Margin="16,0"
+            HorizontalOptions="FillAndExpand"
+            IsVisible="False"
+            Opacity="0"
+            VerticalOptions="Start">
+            <Frame Padding="16,10">
+                <Frame.Triggers>
+                    <DataTrigger
+                        Binding="{Binding AlertType, Source={x:Reference Base}}"
+                        Value="{x:Static enums:AlertType.Info}"
+                        TargetType="Frame">
+                        <Setter Property="Style" Value="{DynamicResource MultiOptionAlert}" />
+                    </DataTrigger>
+
+                    <DataTrigger
+                        Binding="{Binding AlertType, Source={x:Reference Base}}"
+                        Value="{x:Static enums:AlertType.Warning}"
+                        TargetType="Frame">
+                        <Setter Property="Style" Value="{DynamicResource Warning}" />
+                    </DataTrigger>
+
+                    <DataTrigger
+                        Binding="{Binding AlertType, Source={x:Reference Base}}"
+                        Value="{x:Static enums:AlertType.Error}"
+                        TargetType="Frame">
+                        <Setter Property="Style" Value="{DynamicResource Alert}" />
+                    </DataTrigger>
+                </Frame.Triggers>
+                <!--<Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        x:Name="AlertDescrition"
+                        Grid.Row="0"
+                        Padding="0,15"
+                        IsVisible="True"
+                        Opacity="1"
+                        Style="{DynamicResource Label14}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center" />
+                    <StackLayout
+                        Grid.Row="1"
+                        Orientation="Horizontal"
+                        Spacing="15"
+                        HorizontalOptions="EndAndExpand"
+                        IsVisible="{Binding AlertOptions, Source={x:Reference Base}, Converter={StaticResource ListContainsItemConverter}}"
+                        BindableLayout.ItemsSource="{Binding AlertOptions, Source={x:Reference Base}}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Label
+                                    Padding="0"
+                                    Text="{Binding Text}"
+                                    Style="{DynamicResource Label14WhiteBold}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Command}"
+                                            NumberOfTapsRequired="1" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </Grid>-->
+            </Frame>
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer
+                    NumberOfTapsRequired="1"
+                    Tapped="AlertOnTapped" />
+            </ContentView.GestureRecognizers>
+        </ContentView>
+    </Grid>
+</freshMvvm:FreshBaseContentPage>

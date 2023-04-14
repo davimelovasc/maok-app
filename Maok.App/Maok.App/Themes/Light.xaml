@@ -1,0 +1,1510 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Maok.App.Themes.Light"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:styles="clr-namespace:Maok.App.Themes.Styles"
+    xmlns:pages="clr-namespace:Maok.App.Modules.Shared.Pages"
+    xmlns:button="clr-namespace:Maok.App.Modules.Shared.Components.Button">
+    <ResourceDictionary.MergedDictionaries>
+        <styles:ConverterStyle />
+        <styles:SizeStyle />
+        <styles:FontStyle />
+        <styles:ColorStyle />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style
+        x:Key="Base"
+        ApplyToDerivedTypes="True"
+        TargetType="pages:BasePage">
+        <Setter Property="BackgroundColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="BottomSheetBorderColor" Value="Transparent" />
+        <Setter Property="BottomSheetCornerRadius" Value="14,14,0,0" />
+        <Setter Property="BottomSheetShadowColor" Value="{DynamicResource BottomSheetContainerShadowColor}" />
+        <Setter Property="BottomSheetColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="PageBackgroundColorGray100"
+        ApplyToDerivedTypes="True"
+        BasedOn="{StaticResource Base}"
+        TargetType="pages:BasePage">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray100Color}" />
+    </Style>
+
+    <Style
+        x:Key="HelpModalPage"
+        ApplyToDerivedTypes="True"
+        TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="BackgroundColorGray100"
+        ApplyToDerivedTypes="True"
+        TargetType="VisualElement">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray100Color}" />
+    </Style>
+    <Style
+        x:Key="BackgroundColorGray200"
+        ApplyToDerivedTypes="True"
+        TargetType="VisualElement">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray200Color}" />
+    </Style>
+
+    <Style
+        x:Key="BackgroundColorRed50"
+        ApplyToDerivedTypes="True"
+        BasedOn="{StaticResource Base}"
+        TargetType="pages:BasePage">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Red50Color}" />
+    </Style>
+
+    <Style
+        x:Key="BackgroundColorWhite"
+        ApplyToDerivedTypes="True"
+        TargetType="VisualElement">
+        <Setter Property="BackgroundColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+    <Style
+        x:Key="BackgroundColorSkyBlue"
+        ApplyToDerivedTypes="True"
+        TargetType="VisualElement">
+        <Setter Property="BackgroundColor" Value="{DynamicResource SkyBlue50Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label8"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size8}" />
+    </Style>
+
+    <Style
+        x:Key="Label8BlackBold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size8}" />
+    </Style>
+
+    <Style
+        x:Key="Label8Gray700"
+        BasedOn="{StaticResource Label8}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label8Gray700Bold"
+        BasedOn="{StaticResource Label8}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label10"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+    </Style>
+
+    <Style
+        x:Key="Label10White"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+    </Style>
+
+    <Style
+        x:Key="Label10WhiteBold"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label10Gray600"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray600Color}" />
+    </Style>
+    <Style
+        x:Key="Label10Gray700"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Label10Gray900"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray900Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label10GreenBold"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource Green600Color}" />
+    </Style>
+    <Style
+        x:Key="Span10White"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span10Gray700"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Span10Gray800"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+
+    <Style
+        x:Key="Span10Gray800Bold"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+
+    <Style
+        x:Key="Span10BlackBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label20Lime600"
+        TargetType="Label">
+        <Setter Property="FontSize" Value="{StaticResource Size20}" />
+        <Setter Property="TextColor" Value="{DynamicResource Lime600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Lime600Bold"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+        <Setter Property="TextColor" Value="{DynamicResource Lime600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Lime600"
+        TargetType="Label">
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+        <Setter Property="TextColor" Value="{DynamicResource Lime600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label20Lime600Bold"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size20}" />
+        <Setter Property="TextColor" Value="{DynamicResource Lime600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label10Gray700Bold"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size10}" />
+    </Style>
+
+    <Style
+        x:Key="Label10Red700"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label10Red700Bold"
+        BasedOn="{StaticResource Label10Red700}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label10BlackBold"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+    </Style>
+
+    <Style
+        x:Key="Label12"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Black"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label12SkyBlue600"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource SkyBlue600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label12SkyBlue600Bold"
+        BasedOn="{StaticResource Label12SkyBlue600}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Bold"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12BlackBold"
+        BasedOn="{StaticResource Label12Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+    <Style
+        x:Key="Label12RedBold"
+        BasedOn="{StaticResource Label12Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource RedColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Red700"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Red700Bold"
+        BasedOn="{StaticResource Label12Red700}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12BlueBold"
+        BasedOn="{StaticResource Label12Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Blue600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Span12BlackBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span12Purple700Bold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+        <Setter Property="TextColor" Value="{DynamicResource Purple700Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Span12RedBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource RedColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span14White"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span14WhiteBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span14BlackBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span14Black"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+    </Style>
+
+    <Style
+        x:Key="Span16BlackBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span20BlackBold"
+        TargetType="Span">
+        <Setter Property="FontSize" Value="{StaticResource Size20}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Span14"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+    </Style>
+    <Style
+        x:Key="Span16"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+    </Style>
+    <Style
+        x:Key="Span16Black"
+        BasedOn="{StaticResource Span16}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+    <Style
+        x:Key="Span18"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size18}" />
+    </Style>
+    <Style
+        x:Key="Span20"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size20}" />
+    </Style>
+    <Style
+        x:Key="Span24"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size24}" />
+    </Style>
+    <Style
+        x:Key="Span16Bold"
+        BasedOn="{StaticResource Span16}"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Span16Gray800"
+        BasedOn="{StaticResource Span16}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+    <Style
+        x:Key="Span16Gray800Bold"
+        BasedOn="{StaticResource Span16Bold}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+    <Style
+        x:Key="Span18BoldWhite"
+        BasedOn="{StaticResource Span18}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Span18Bold"
+        BasedOn="{StaticResource Span18}"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Span18Gray800"
+        BasedOn="{StaticResource Span18}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+    <Style
+        x:Key="Span18Gray800Bold"
+        BasedOn="{StaticResource Span18}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Span20BoldWhite"
+        BasedOn="{StaticResource Span20}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Span24BoldWhite"
+        BasedOn="{StaticResource Span24}"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label10Vitreo"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+    </Style>
+    <Style
+        x:Key="Label12Vitreo"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label12VitreoBold"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Orange600Bold"
+        BasedOn="{StaticResource Label12Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Orange600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Gray600"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray600Color}" />
+    </Style>
+    <Style
+        x:Key="Label12Gray600Bold"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray600Color}" />
+    </Style>
+    <Style
+        x:Key="Label12Gray700"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Label12Gray800"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+    <Style
+        x:Key="Label12Gray800Bold"
+        BasedOn="{StaticResource Label12Gray800}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label12Gray900"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray900Color}" />
+    </Style>
+    <Style
+        x:Key="Label12Gray900Bold"
+        BasedOn="{StaticResource Label12Gray900}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Span12White"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+    <Style
+        x:Key="Span12Gray700"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Span12Gray700Bold"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Span14Gray700"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Span14Gray700Bold"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Span14BlueBold"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+        <Setter Property="TextColor" Value="{DynamicResource Blue600Color}" />
+    </Style>
+    <Style
+        x:Key="Span16Gray700Bold"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Green600"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundBottomBarItemCenterColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Green600Bold"
+        BasedOn="{StaticResource Label12Green600}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Gray700Bold"
+        BasedOn="{StaticResource Label12Gray700}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12BoldAttentation"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource AttentationColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label12ErrorRed"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+    <Style
+        x:Key="Label12White"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+    <Style
+        x:Key="Label12WhiteBold"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+    <Style
+        x:Key="Label12BoldRed"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+    <Style
+        x:Key="Label12BoldGreen"
+        BasedOn="{StaticResource Label12}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource Green600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Black"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Red"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14VitreoBold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Blue600Bold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Blue600Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size14}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Bold"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label14RedBold"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{StaticResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14BlackBold"
+        BasedOn="{StaticResource Label14Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Gray400"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray400Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Gray400Bold"
+        BasedOn="{StaticResource Label14Gray400}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Gray700"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Gray700Bold"
+        BasedOn="{StaticResource Label14Gray700}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Gray800"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Purple700"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Purple700Color}" />
+    </Style>
+    <Style
+        x:Key="Label16Purple700Bold"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Purple700Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label10Gray400"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray400Color}" />
+    </Style>
+    <Style
+        x:Key="Label10Gray800"
+        BasedOn="{StaticResource Label10}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Gray800Bold" 
+        BasedOn="{StaticResource Label14Gray800}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label14Gray900"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray900Color}" />
+    </Style>
+    <Style
+        x:Key="Label14Gray900Bold"
+        BasedOn="{StaticResource Label14Gray900}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label14Green600"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundBottomBarItemCenterColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label14Green600Bold"
+        BasedOn="{StaticResource Label14Green600}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label14ErrorRed"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14White"
+        BasedOn="{StaticResource Label14}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label16White"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label14WhiteBold"
+        BasedOn="{StaticResource Label14Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label14ErrorRedBold"
+        BasedOn="{StaticResource Label14ErrorRed}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16BoldRed"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Black"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label12Blue600"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Blue600Color}" />
+        <Setter Property="FontSize" Value="{StaticResource Size12}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Blue600Bold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Blue600Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+    </Style>
+    <Style
+        x:Key="Label16Gray700"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Gray700Bold"
+        BasedOn="{StaticResource Label16Gray700}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Gray800"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray800Color}" />
+    </Style>
+    <Style
+        x:Key="Label16Gray800Bold"
+        BasedOn="{StaticResource Label16Gray800}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Bold"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16BoldVitreo"
+        BasedOn="{StaticResource Label16Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource VitreoColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label16BoldGray700"
+        BasedOn="{StaticResource Label16Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label14BoldGray700"
+        BasedOn="{StaticResource Label14Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource Gray700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label16BlackBold"
+        BasedOn="{StaticResource Label16Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label16WhiteBold"
+        BasedOn="{StaticResource Label16Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Green600"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundBottomBarItemCenterColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Green600Bold"
+        BasedOn="{StaticResource Label16Green600}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16BlueBold"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label16Blue"
+        BasedOn="{StaticResource Label16}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label16ErrorRedBold"
+        BasedOn="{StaticResource Label16Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label18"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size18}" />
+    </Style>
+
+    <Style
+        x:Key="Label18Bold"
+        BasedOn="{StaticResource Label18}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label18WhiteBold"
+        BasedOn="{StaticResource Label18}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label18BlackBold"
+        BasedOn="{StaticResource Label18}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label18RedBold"
+        BasedOn="{StaticResource Label18Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Red700Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label18GreenBold"
+        BasedOn="{StaticResource Label18Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundBottomBarItemCenterColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label18Gray500Bold"
+        BasedOn="{StaticResource Label18Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray500Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label18Gray600Bold"
+        BasedOn="{StaticResource Label18Bold}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray600Color}" />
+    </Style>
+
+    <Style
+        x:Key="Label20"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size20}" />
+    </Style>
+
+    <Style
+        x:Key="Label22"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size22}" />
+    </Style>
+
+    <Style
+        x:Key="Label22BlackBold"
+        BasedOn="{StaticResource Label22}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label20White"
+        BasedOn="{StaticResource Label20}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="Label20BoldWhite"
+        BasedOn="{StaticResource Label20}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label20BoldBlack"
+        BasedOn="{StaticResource Label20}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label20BoldGray700"
+        BasedOn="{StaticResource Label20BoldBlack}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Label20Gray800"
+        BasedOn="{StaticResource Label20}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="Label24"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size24}" />
+    </Style>
+    <Style
+        x:Key="Label24White"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size24}" />
+    </Style>
+    <Style
+        x:Key="Label24BlackBold"
+        BasedOn="{StaticResource Label24}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+    <Style
+        x:Key="Label24Gray700"
+        BasedOn="{StaticResource Label24}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+    </Style>
+    <Style
+        x:Key="Label24Purple700Bold"
+        BasedOn="{StaticResource Label24}"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Purple700Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style
+        x:Key="Label30"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size30}" />
+    </Style>
+
+    <Style
+        x:Key="Label30Gray500"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray500Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size24}" />
+    </Style>
+
+    <Style
+        x:Key="Span16White"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontSize" Value="{StaticResource Size16}" />
+    </Style>
+
+    <Style
+        x:Key="Span30WhiteBold"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size30}" />
+    </Style>
+
+    <Style
+        x:Key="Span32WhiteBold"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size32}" />
+    </Style>
+
+    <Style
+        x:Key="Span32White"
+        TargetType="Span">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontSize" Value="{StaticResource Size32}" />
+    </Style>
+
+    <Style
+        x:Key="Label28WhiteBold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size28}" />
+    </Style>
+
+    <Style
+        x:Key="Label48BlackBold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size48}" />
+    </Style>
+
+    <Style
+        x:Key="Label48WhiteBold"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Size48}" />
+    </Style>
+
+    <Style
+        x:Key="CodeEntry"
+        TargetType="Entry">
+        <Setter Property="Keyboard" Value="Numeric" />
+        <Setter Property="MaxLength" Value="6" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+    </Style>
+
+    <Style TargetType="ScrollView">
+        <Setter Property="HorizontalScrollBarVisibility" Value="Never" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Never" />
+    </Style>
+
+    <Style TargetType="CollectionView">
+        <Setter Property="HorizontalScrollBarVisibility" Value="Never" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Never" />
+    </Style>
+
+    <Style
+        x:Key="Line"
+        TargetType="BoxView">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray300Color}" />
+        <Setter Property="HeightRequest" Value="0.8" />
+        <Setter Property="VerticalOptions" Value="Start" />
+    </Style>
+
+    <Style
+        x:Key="Line2p"
+        TargetType="BoxView">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray300Color}" />
+        <Setter Property="HeightRequest" Value="1.6" />
+        <Setter Property="VerticalOptions" Value="Start" />
+    </Style>
+
+    <Style
+        x:Key="LineBlack"
+        TargetType="BoxView">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BlackColor}" />
+        <Setter Property="HeightRequest" Value="0.8" />
+        <Setter Property="VerticalOptions" Value="Start" />
+    </Style>
+
+    <Style
+        x:Key="BottomSheetLine"
+        TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BottomSheetLineColor}" />
+        <Setter Property="HeightRequest" Value="4" />
+        <Setter Property="WidthRequest" Value="50" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Start" />
+    </Style>
+
+    <Style
+        x:Key="Alert"
+        TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="#ed5e5e" />
+        <Setter Property="MinimumHeightRequest" Value="50" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style
+        x:Key="MultiOptionAlert"
+        TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="MinimumHeightRequest" Value="50" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style
+        x:Key="Warning"
+        TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Orange600Color}" />
+        <Setter Property="MinimumHeightRequest" Value="50" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="CornerRadius" Value="8" />
+    </Style>
+
+    <Style
+        x:Key="FrameBackground"
+        TargetType="Frame">
+        <Setter Property="WidthRequest" Value="120" />
+        <Setter Property="HeightRequest" Value="120" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray100Color}" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="80" />
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style
+        x:Key="BottomSheetBackground"
+        ApplyToDerivedTypes="True"
+        TargetType="Grid">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BottomSheetBackgroundColor}" />
+    </Style>
+
+    <Style
+        x:Key="Indicator"
+        TargetType="ActivityIndicator">
+        <Setter Property="Color" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="IsVisible" Value="{Binding IsBusy}" />
+        <Setter Property="IsRunning" Value="{Binding IsBusy}" />
+    </Style>
+
+    <Style TargetType="RefreshView">
+        <Setter Property="RefreshColor" Value="{DynamicResource VitreoColor}" />
+    </Style>
+
+    <Style
+        x:Key="ButtonPrimary"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="ShadowColor" Value="{DynamicResource ShadowColor}" />
+        <Setter Property="RippleColor" Value="{DynamicResource RippleColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="IsRippleEnabled" Value="true" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{DynamicResource Size16}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource CornerRadiusButton}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButton}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="TextVerticalOptions" Value="Center" />
+        <Setter Property="TextHorizontalOptions" Value="Center" />
+    </Style>
+    <Style
+        x:Key="ButtonWhite"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="ShadowColor" Value="{DynamicResource ShadowColor}" />
+        <Setter Property="RippleColor" Value="{DynamicResource RippleColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="IsRippleEnabled" Value="true" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{DynamicResource Size16}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource CornerRadiusButton}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButton}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="TextVerticalOptions" Value="Center" />
+        <Setter Property="TextHorizontalOptions" Value="Center" />
+    </Style>
+    <Style
+        x:Key="ButtonWhiteWithBorderBlue"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="ShadowColor" Value="{DynamicResource ShadowColor}" />
+        <Setter Property="RippleColor" Value="{DynamicResource RippleColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="IsRippleEnabled" Value="true" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="BorderColor" Value="{DynamicResource VitreoColor}" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{DynamicResource Size16}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource CornerRadiusButton}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButton}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="TextVerticalOptions" Value="Center" />
+        <Setter Property="TextHorizontalOptions" Value="Center" />
+    </Style>
+    <Style
+        x:Key="ButtonRed"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource RedColor}" />
+        <Setter Property="ShadowColor" Value="{DynamicResource ShadowColor}" />
+        <Setter Property="RippleColor" Value="{DynamicResource RippleColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="IsRippleEnabled" Value="true" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{DynamicResource Size16}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource CornerRadiusButton}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButton}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="TextVerticalOptions" Value="Center" />
+        <Setter Property="TextHorizontalOptions" Value="Center" />
+    </Style>
+    <Style
+        x:Key="ButtonOrange"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Red600Color}" />
+        <Setter Property="ShadowColor" Value="{DynamicResource ShadowColor}" />
+        <Setter Property="RippleColor" Value="{DynamicResource RippleColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+        <Setter Property="IsRippleEnabled" Value="true" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="FontFamily" Value="{DynamicResource BoldFont}" />
+        <Setter Property="FontSize" Value="{DynamicResource Size16}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource CornerRadiusButton}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButton}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="TextVerticalOptions" Value="Center" />
+        <Setter Property="TextHorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style
+        x:Key="ButtonPrimarySM"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButtonSM}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource CornerRadiusButtonSM}" />
+        <Setter Property="FontSize" Value="{DynamicResource Size12}" />
+    </Style>
+
+    <Style
+        x:Key="ButtonRedSM"
+        BasedOn="{StaticResource ButtonRed}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="FontSize" Value="{DynamicResource Size12}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource HeightButtonSM}" />
+    </Style>
+
+    <Style
+        x:Key="ButtonFlat"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="IsRippleEnabled" Value="False" />
+        <Setter Property="ShadowColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+    </Style>
+
+    <Style
+        x:Key="ButtonDisabled"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray300Color}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+
+    <Style
+        x:Key="ButtonGray"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray300Color}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray700Color}" />
+    </Style>
+    <Style
+        x:Key="ButtonCancel"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Red700Color}" />
+        <Setter Property="TextColor" Value="{DynamicResource WhiteColor}" />
+    </Style>
+    <Style
+        x:Key="ButtonGray900TextBlackBold"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray200Color}" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray900Color}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+    <Style
+        x:Key="ButtonSkyBlue"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="{DynamicResource SkyBlue600Color}" />
+    </Style>
+
+    <Style
+        x:Key="ButtonOutlineWithoutBorder"
+        BasedOn="{StaticResource ButtonPrimary}"
+        TargetType="button:ButtonComponent">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="IsRippleEnabled" Value="False" />
+        <Setter Property="ShadowColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource VitreoColor}" />
+    </Style>
+</ResourceDictionary>

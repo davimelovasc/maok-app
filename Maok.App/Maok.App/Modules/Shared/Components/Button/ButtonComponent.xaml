@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Maok.App.Modules.Shared.Components.Button.ButtonComponent"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:tap="clr-namespace:Maok.App.Modules.Shared.Components.Effect.Tap"
+    x:Name="Button"
+    AutomationId="PrimaryButton">
+    <tap:RippleEffectComponent
+        Padding="{Binding Padding, Source={x:Reference Button}}"
+        BorderWidth="{Binding BorderWidth, Source={x:Reference Button}}"
+        BorderColor="{Binding BorderColor, Source={x:Reference Button}}"
+        Clicked="OnClicked"
+        CornerRadius="{Binding CornerRadius, Source={x:Reference Button}}"
+        IsRippleEnabled="{Binding IsRippleEnabled, Source={x:Reference Button}}"
+        RippleColor="{Binding RippleColor, Source={x:Reference Button}}"
+        ShadowColor="{Binding ShadowColor, Source={x:Reference Button}}"
+        Color="{Binding BackgroundColor, Source={x:Reference Button}}">
+        <Label
+            Margin="{Binding TextMargin, Source={x:Reference Button}}"
+            FontAttributes="{Binding FontAttributes, Source={x:Reference Button}}"
+            FontFamily="{Binding FontFamily, Source={x:Reference Button}}"
+            FontSize="{Binding FontSize, Source={x:Reference Button}}"
+            HorizontalOptions="{Binding TextHorizontalOptions, Source={x:Reference Button}}"
+            Text="{Binding Text, Source={x:Reference Button}}"
+            TextColor="{Binding TextColor, Source={x:Reference Button}}"
+            VerticalOptions="{Binding TextVerticalOptions, Source={x:Reference Button}}"
+            HorizontalTextAlignment="{Binding HorizontalTextAlignment, Source={x:Reference Button}}" />
+    </tap:RippleEffectComponent>
+</ContentView>

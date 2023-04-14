@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:BasePage
+    xmlns:pages="clr-namespace:Maok.App.Modules.Shared.Pages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constants="clr-namespace:Maok.App.Utils.Constants;assembly=Maok.App"
+    xmlns:button="clr-namespace:Maok.App.Modules.Shared.Components.Button" 
+    xmlns:maok="clr-namespace:Maok.App"
+    x:Class="Maok.App.Modules.Register.Pages.RegisterEmailPage"
+    x:Name="RegisterEmail"
+    HasBackButton="True"
+    HasHeader="False"
+    Theme="Light"
+    UseSafeAreaBottom="False"
+    UseSafeAreaTop="False">
+    <pages:BasePage.Body>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.40*" />
+                <RowDefinition Height="0.60*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Source="{Binding Model.ImageBackground}"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"                
+                VerticalOptions="FillAndExpand" />
+
+            <Image
+                Grid.Row="0"
+                Source="botao_voltar.png"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="15,40,0,0"
+                WidthRequest="20"
+                HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToBackPageCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <StackLayout                
+                Margin="0,80,0,0"
+                Padding="32"
+                Grid.Row="0"
+                Spacing="15"
+                VerticalOptions="StartAndExpand">
+                <Label
+                    Text="Qual é o seu e-mail?"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"                    
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    FontSize="24"/>
+                <StackLayout>
+                    <maok:CustomEntry
+                        Text="{Binding Model.Email}"
+                        BackgroundColor="Transparent"
+                        Placeholder="Digite seu email"
+                        PlaceholderColor="White"
+                        TextColor="#FFFFFF"
+                        Keyboard="Email" />
+                    <BoxView
+                        BackgroundColor="#FFFFFF"
+                        HeightRequest="1"/>
+                    <Label
+                        Margin="0,5"
+                        Text="Você vai ter que confirmar esse e-mail mais tarde."
+                        TextColor="#FFFFFF"
+                        FontSize="12"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <ActivityIndicator
+                Grid.Row="1"
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,80"
+                Color="White" />
+
+            <Button
+                IsVisible="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+                Grid.Row="1"
+                Command="{Binding Source={x:Reference RegisterEmail}, Path=BindingContext.GoToNameCommand}"
+                BackgroundColor="#5D25C8"
+                TextColor="White"
+                Text="PRÓXIMO"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,80"
+                WidthRequest="300"
+                HeightRequest="50"
+                CornerRadius="20"/>
+        </Grid>
+    </pages:BasePage.Body>
+</pages:BasePage>

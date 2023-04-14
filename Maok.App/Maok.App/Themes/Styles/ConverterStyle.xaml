@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Maok.App.Themes.Styles.ConverterStyle"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Maok.App.Utils.Converters">
+    <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+    <converters:ListContainsItemConverter x:Key="ListContainsItemConverter" />
+    <converters:ListNotContainsItemConverter x:Key="ListNotContainsItemConverter" />
+    <converters:StringNullOrEmptyConverter x:Key="StringNullOrEmptyConverter" />
+    <converters:StringNotNullOrEmptyConverter x:Key="StringNotNullOrEmptyConverter" />
+    <converters:ObjectNotNullConverter x:Key="ObjectNotNullConverter" />
+    <converters:OpacityConverter x:Key="OpacityConverter" />
+    <converters:InverseOpacityConverter x:Key="InverseOpacityConverter" />
+    <converters:NegativeConverter x:Key="NegativeConverter" />
+    <converters:BottombarItemConverter x:Key="BottombarItemConverter" />
+    <converters:IsValueGreaterZeroConverter x:Key="IsValueGreaterZeroConverter" />
+    <converters:IsValueNotZeroConverter x:Key="IsValueNotZeroConverter" />
+    <converters:IsValueZeroConverter x:Key="IsValueZeroConverter" />
+    <converters:IsValueZeroOrLessConverter x:Key="IsValueZeroOrLessConverter" />
+    <converters:StringToDateConverter x:Key="StringToDateConverter" />
+    <converters:HumanizeConverter x:Key="HumanizeConverter" />
+    <converters:CnpjConverter x:Key="CnpjConverter" />
+    <converters:CpfConverter x:Key="CpfConverter" />
+    <converters:InvestorTypeConverter x:Key="InvestorTypeConverter" />
+    <converters:NullSetDashValueConverter x:Key="NullSetDashValueConverter" />
+    <converters:ClearMaskConverter x:Key="ClearMaskConverter" />
+    <converters:CurrencyMaskConverter x:Key="CurrencyMaskConverter" />
+    <converters:DateToStringConverter x:Key="DateToStringConverter" />
+</ResourceDictionary>

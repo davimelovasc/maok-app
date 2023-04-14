@@ -1,0 +1,11 @@
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Maok.App.csproj.AssemblyReference.cache
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Maok.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Modules\Shared\Components\Button\View1.xaml.g.cs
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Modules\Shared\Components\Effect\Tap\RippleEffectComponent.xaml.g.cs
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Maok.App.AssemblyInfoInputs.cache
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Maok.App.AssemblyInfo.cs
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Maok.App.csproj.CoreCompileInputs.cache
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Modules\Shared\Components\Button\ButtonComponent.xaml.g.cs
+C:\Users\thiago.bueno\Documents\Projetos\Maok\Maok.App\Maok.App\Maok.App\obj\Debug\netstandard2.0\Modules\Shared\Pages\BasePage.xaml.g.cs

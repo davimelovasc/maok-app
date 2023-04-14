@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:BasePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Maok.App.Modules.Shared.Pages"
+    xmlns:constants="clr-namespace:Maok.App.Utils.Constants;assembly=Maok.App"
+    x:Class="Maok.App.Modules.Register.Pages.RegisterApresentationPage"
+    x:Name="RegisterApresentation"
+    HasBackButton="False"
+    HasHeader="False"
+    Theme="Light"
+    UseSafeAreaBottom="False"
+    UseSafeAreaTop="False">
+    <pages:BasePage.Body>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.40*" />
+                <RowDefinition Height="0.60*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Source="{Binding ImageBackground}"
+                Aspect="AspectFill"
+                HorizontalOptions="FillAndExpand"                
+                VerticalOptions="FillAndExpand" />
+
+            <Image
+                Grid.Row="0"
+                Source="botao_voltar.png"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="15,40,0,0"
+                WidthRequest="20"
+                HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToBackPageCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="0"
+                Source="{Binding Logo}"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Margin="30,80,0,0"
+                WidthRequest="180"
+                HeightRequest="120"/>
+
+            <StackLayout
+                Grid.Row="1"
+                Spacing="20"
+                Margin="32,20,32,64"
+                VerticalOptions="StartAndExpand">
+                <StackLayout>
+                    <Label
+                        Text="Vamos lá!"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"                    
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        FontSize="30"/>
+
+                    <Label
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"                    
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        FontSize="20">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Precisamos de algumas" />
+                                <Span Text="{x:Static constants:SharedConstant.ConfigLabelBreakLine}" />
+                                <Span Text="informações" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Label
+                    Text="Vai ser bem rápido!"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"                    
+                    TextColor="White"
+                    FontSize="20"/>
+            </StackLayout>
+            <Button
+                Grid.Row="1"
+                Command="{Binding Source={x:Reference RegisterApresentation}, Path=BindingContext.GoToEmailCommand}"
+                BackgroundColor="#5D25C8"
+                TextColor="White"
+                Text="PRÓXIMO"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                WidthRequest="300"
+                HeightRequest="50"
+                Margin="0,0,0,80"
+                CornerRadius="20"/>
+        </Grid>
+    </pages:BasePage.Body>
+</pages:BasePage>

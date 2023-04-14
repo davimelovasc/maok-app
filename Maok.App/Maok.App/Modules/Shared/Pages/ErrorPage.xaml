@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:BasePage
+    xmlns:pages="clr-namespace:Maok.App.Modules.Shared.Pages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Maok.App.Modules.Shared.Pages.ErrorPage">
+    <pages:BasePage.BodyScrolled>
+        <StackLayout>
+            <Label
+                Text="Erro"
+                FontSize="50"
+                TextColor="Black"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </pages:BasePage.BodyScrolled>
+</pages:BasePage>
